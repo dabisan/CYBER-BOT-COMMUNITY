@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "slap",
+  name: "كف",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -38,7 +38,7 @@ module.exports.run = async ({ api, event, args }) => {
         request(getURL).pipe(fs.createWriteStream(__dirname + `/cache/slap.${ext}`)).on("close", callback);
 			})
     .catch(err => {
-                     api.sendMessage("Failed to generate gif, be sure that you've tag someone!", event.threadID, event.messageID);
+                     api.sendMessage("فشل!", event.threadID, event.messageID);
     api.setMessageReaction("☹️", event.messageID, (err) => {}, true);
                   })     
 }
