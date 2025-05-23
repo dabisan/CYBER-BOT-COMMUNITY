@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "fish",
+	name: "صيد",
 	version: "1.0.0",
 	hasPermssion: 0,
 	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -15,9 +15,9 @@ module.exports.languages = {
     
         
     "en": {
-        "cooldown": "You have worked today, to avoid exhaustion please come back after: %1 minute(s) %2 second(s).",
-        "rewarded": "You've got big fish again today, and been sold for: %2$",
-        "job1": "Fishing",
+        "cooldown": "لقد عملت كثيرا اليوم طير ارتح شوي،ارجع بعد: %1 minute(s) %2 second(s).",
+        "rewarded": "حصلت على سمكة كبيرة يا جورج هيهي, حصلت على: %2$",
+        "job1": "انتهت",
     }
 }
 
@@ -35,7 +35,7 @@ module.exports.run = async ({ event, api, Currencies, getText }) => {
     }
     else {
         const job = [
-            getText("Fishing"),
+            getText("انتهت"),
         ];
         const amount = Math.floor(Math.random() * 1000000);
         return api.sendMessage(getText("rewarded", job[Math.floor(Math.random() * job.length)], amount), threadID, async () => {
