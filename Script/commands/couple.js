@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "couple",
+    name: "كوبل",
     version: "2.0.0",
     hasPermssion: 0,
     credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -67,7 +67,7 @@ module.exports.run = async function ({ event, api, args }) {
     const { threadID, messageID, senderID } = event;
     var mention = Object.keys(event.mentions)[0]
     let tag = event.mentions[mention].replace("@", "");
-    if (!mention) return api.sendMessage("Vui lòng tag 1 người", threadID, messageID);
+    if (!mention) return api.sendMessage("اعمل تاغ", threadID, messageID);
     else {
         var one = senderID, two = mention;
         return makeImage({ one, two }).then(path => api.sendMessage({ body: "Ship ",
