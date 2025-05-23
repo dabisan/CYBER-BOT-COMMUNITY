@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "antiout",
+    name: "ارجاع",
     version: "1.0.0",
     credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
     hasPermssion: 1,
