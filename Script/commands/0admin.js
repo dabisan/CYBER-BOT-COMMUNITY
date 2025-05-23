@@ -3,7 +3,7 @@ module.exports.config = {
 	name: "0admin",
 	version: "1.0.5",
 	hasPermssion: 0,
-	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
+	credits: "YUNA BOT >-<",
 	description: "Admin Config",
 	commandCategory: "Admin",
 	usages: "Admin",
@@ -47,7 +47,20 @@ module.exports.onLoad = function() {
 }
 module.exports.run = async function ({ api, event, args, Users, permssion, getText }) {  
     const content = args.slice(1, args.length);
-    if (args.length == 0) return api.sendMessage({body:`==== [ 𝗔𝗗𝗠𝗜𝗡 𝗦𝗘𝗧𝗧𝗜𝗡𝗚 ] ====\n━━━━━━━━━━━━━━━\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗹𝗶𝘀𝘁 => 𝗩𝗶𝗲𝘄 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗔𝗱𝗺𝗶𝗻 𝗮𝗻𝗱 𝗦𝘂𝗽𝗽𝗼𝗿𝘁\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗮𝗱𝗱 => 𝗔𝗱𝗱 𝘂𝘀𝗲𝗿 𝗮𝘀 𝗔𝗱𝗺𝗶𝗻\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗿𝗲𝗺𝗼𝘃𝗲=> 𝗥𝗲𝗺𝗼𝘃𝗲 𝗿𝗼𝗹𝗲 𝗔𝗱𝗺𝗶𝗻\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗮𝗱𝗱𝗻𝗱𝗵 => 𝗔𝗱𝗱 𝘂𝘀𝗲𝗿 𝗮𝘀 𝗦𝘂𝗽𝗽𝗼𝗿𝘁\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗿𝗲𝗺𝗼𝘃𝗲𝗻𝗱𝗵=> 𝗥𝗲𝗺𝗼𝘃𝗲 𝗿𝗼𝗹𝗲 𝗦𝘂𝗽𝗽𝗼𝗿𝘁\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗾𝘁𝘃𝗼𝗻𝗹𝘆=> 𝘁𝗼𝗴𝗴𝗹𝗲  𝗺𝗼𝗱𝗲 𝗼𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻𝘀 𝘂𝘀𝗲 𝗯𝗼𝘁\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗻𝗱𝗵𝗼𝗻𝗹𝘆=> 𝘁𝗼𝗴𝗴𝗹𝗲 𝗺𝗼𝗱𝗲 𝗼𝗻𝗹𝘆 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝗯𝗼𝘁 𝘂𝘀𝗶𝗻𝗴 𝗯𝗼𝘁\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗼𝗻𝗹𝘆 => 𝘁𝗼𝗴𝗴𝗹𝗲 𝗺𝗼𝗱𝗲 𝗼𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻𝘀 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗶𝗯𝗼𝗻𝗹𝘆 => 𝘁𝗼𝗴𝗴𝗹𝗲 𝗺𝗼𝗱 𝗼𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻𝘀 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁𝘀 𝗶𝗻 𝗶𝗯 𝘀𝗲𝗽𝗮𝗿𝗮𝘁𝗲𝗹𝘆 𝗳𝗿𝗼𝗺 𝗯𝗼𝘁𝘀\n━━━━━━━━━━━━━━━\n𝗛𝗗𝗦𝗗 => ${global.config.PREFIX}𝗮𝗱𝗺𝗶𝗻 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝘁𝗼 𝘂𝘀𝗲`}, event.threadID, event.messageID); 
+    if (args.length == 0) return api.sendMessage({body:`==== [ إعدادات المشرف ] ====
+\n━━━━━━━━━━━━━━━
+\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗹𝗶𝘀𝘁 => عرض قائمة المشرفين والدعم
+\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗮𝗱𝗱 => إضافة مستخدم كمشرف
+\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗿𝗲𝗺𝗼𝘃𝗲=> إزالة دور المشرف
+\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗮𝗱𝗱𝗻𝗱𝗵 => إضافة مستخدم كدعم
+\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗿𝗲𝗺𝗼𝘃𝗲𝗻𝗱𝗵=> إزالة دور الدعم
+\n𝗠𝗢𝗗𝗘 -𝗮𝗱𝗺𝗶𝗻 𝗾𝘁𝘃𝗼𝗻𝗹𝘆=> تبديل الوضع لاستخدام البوت من قبل المشرفين فقط
+\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗻𝗱𝗵𝗼𝗻𝗹𝘆=> تبديل الوضع لاستخدام البوت من قبل الدعم فقط
+\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗼𝗻𝗹𝘆 => تبديل الوضع بحيث يمكن للمشرفين فقط استخدام البوت
+\n𝗠𝗢𝗗𝗘 - 𝗮𝗱𝗺𝗶𝗻 𝗶𝗯𝗼𝗻𝗹𝘆 => تبديل الوضع بحيث يمكن للمشرفين فقط استخدام البوتات في IB بشكل منفصل عن البوتات
+\n━━━━━━━━━━━━━━━
+\n𝗛𝗗𝗦𝗗 => ${global.config.PREFIX} أوامر admin للاستخدام
+
     const { threadID, messageID, mentions } = event;
     const { configPath } = global.client;
     const { ADMINBOT } = global.config;
@@ -67,7 +80,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
             for (const idAdmin of listAdmin) {
                 if (parseInt(idAdmin)) {
                   const name = (await Users.getData(idAdmin)).name
-                    msg.push(`𝗧𝗲̂𝗻: ${name}\n» 𝗟𝗶𝗻𝗸 𝗙𝗕: https://www.facebook.com/${idAdmin} 💌`);
+                    msg.push(`الاسم: ${name}\n» رابط فيسبوك: https://www.facebook.com/${idAdmin} 💌`);
                 }
             }
           listNDH = NDH || config.NDH ||  [];
@@ -75,7 +88,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
             for (const idNDH of listNDH) {
                 if (parseInt(idNDH)) {
                   const name1 = (await Users.getData(idNDH)).name
-                    msg1.push(`𝗧𝗲̂𝗻: ${name1}\n» 𝗟𝗶𝗻𝗸 𝗙𝗕: https://www.facebook.com/${idNDH} 🤖`);
+                    msg1.push(`الاسم: ${name1}\n» رابط الفيسبوك: https://www.facebook.com/${idNDH} 🤖`);
                 }
             }
 
@@ -103,7 +116,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
                 config.ADMINBOT.push(content[0]);
                 const name = (await Users.getData(content[0])).name
                 writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf8');
-                return api.sendMessage(getText("addedNewAdmin", 1, `𝗔𝗱𝗺𝗶𝗻 - ${name}`), threadID, messageID);
+                return api.sendMessage(getText("تم اضافة ادمن جديد 🫠", 1, `ادمن - ${name}`), threadID, messageID);
             }
             else return global.utils.throwError(this.config.name, threadID, messageID);
         }
@@ -192,13 +205,13 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         const pathData = resolve(__dirname, 'cache', 'data.json');
         const database = require(pathData);
         const { adminbox } = database;   
-          if (permssion < 1) return api.sendMessage("𝗠𝗢𝗗𝗘 - 𝗕𝗼𝗿𝗱𝗲𝗿 𝗰𝗮𝗻𝗴𝗹𝗲 𝗿𝗶𝗴𝗵𝘁𝘀 🎀 ", threadID, messageID);
+          if (permssion < 1) return api.sendMessage("الوضع - حدود حقوق الزاوية 🎀 ", threadID, messageID);
         if (adminbox[threadID] == true) {
             adminbox[threadID] = false;
-            api.sendMessage("𝗠𝗢𝗗𝗘 » 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗱𝗶𝘀𝗮𝗯𝗹𝗲 𝗤𝗧𝗩 𝗺𝗼𝗱𝗲 𝗼𝗻𝗹𝘆 𝗲𝘃𝗲𝗿𝘆𝗼𝗻𝗲 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗲 𝗯𝗼𝘁 👀", threadID, messageID);
+            api.sendMessage("𝗠𝗢𝗗𝗘 » تم تعطيل وضع QTV بنجاح، يمكن للجميع استخدام البوت 👀", threadID, messageID);
         } else {
             adminbox[threadID] = true;
-            api.sendMessage("𝗠𝗢𝗗𝗘 » 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗲𝗻𝗮𝗯𝗹𝗲 𝗤𝗧𝗩 𝗼𝗻𝗹𝘆 𝗺𝗼𝗱𝗲, 𝗼𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻𝗶𝘀𝘁𝗿𝗮𝘁𝗼𝗿𝘀 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁𝘀 👀", threadID, messageID);
+            api.sendMessage("𝗠𝗢𝗗𝗘 » تم تفعيل وضع QTV فقط، يمكن للمسؤولين فقط استخدام البوتات 👀", threadID, messageID);
     }
         writeFileSync(pathData, JSON.stringify(database, null, 4));
         break;
@@ -206,25 +219,26 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
    case 'ndhonly':
         case '-ndh': {
             //---> CODE ADMIN ONLY<---//
-   if (permssion < 2) return api.sendMessage("𝗠𝗢𝗗𝗘 - 𝗕𝗼𝗿𝗱𝗲𝗿 𝗰𝗮𝗻𝗴𝗹𝗲 𝗿𝗶𝗴𝗵𝘁𝘀 🎀 ", threadID, messageID);       
+   if (permssion < 2) return api.sendMessage(" 𝗠𝗢𝗗𝗘 - تبديل حقوق الحدود 🎀", threadID, messageID);       
             if (config.ndhOnly == false) {
                 config.ndhOnly = true;
-                api.sendMessage(`𝗠𝗢𝗗𝗘 » 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗲𝗻𝗮𝗯𝗹𝗲 𝗡𝗗𝗛 𝗢𝗻𝗹𝘆 𝗺𝗼𝗱𝗲, 𝗼𝗻𝗹𝘆 𝗯𝗼𝘁 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁 👾`, threadID, messageID);
+                api.sendMessage(`𝗠𝗢𝗗𝗘 » تم تفعيل وضع NDH فقط، يمكن فقط لدعم البوت استخدام البوت 👾`, threadID, messageID);
             } else {
                 config.ndhOnly = false;
-                api.sendMessage(`𝗠𝗢𝗗𝗘 » 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗱𝗶𝘀𝗮𝗯𝗹𝗲 𝗡𝗗𝗛 𝗢𝗻𝗹𝘆 𝗺𝗼𝗱𝗲, 𝗲𝘃𝗲𝗿𝘆𝗼𝗻𝗲 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗲 𝗯𝗼𝘁 👾`, threadID, messageID);
+                api.sendMessage(`𝗠𝗢𝗗𝗘 » تم تعطيل وضع NDH فقط بنجاح، يمكن للجميع استخدام البوت 👾
+`, threadID, messageID);
             }
                 writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf8');
                 break;
             }
             case 'ibonly': {
-            if (permssion != 3) return api.sendMessage("𝗠𝗢𝗗𝗘 - 𝗕𝗼𝗿𝗱𝗲𝗿 𝗰𝗮𝗻𝗴𝗹𝗲 𝗿𝗶𝗴𝗵𝘁𝘀 🎀", threadID, messageID);
+            if (permssion != 3) return api.sendMessage("𝗠𝗢𝗗𝗘 - تبديل حقوق الحدود 🎀", threadID, messageID);
                    if (config.adminPaOnly == false) {
                     config.adminPaOnly = true;
-                    api.sendMessage("𝗠𝗢𝗗𝗘 » 𝗜𝗯 𝗢𝗻𝗹𝘆 𝗺𝗼𝗱𝗲 𝗶𝘀 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗲𝗻𝗮𝗯𝗹𝗲𝗱, 𝗼𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻𝘀 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁𝘀 𝗶𝗻 𝘁𝗵𝗲𝗶𝗿 𝗼𝘄𝗻 𝗶𝗻𝗯𝗼𝘅 💬", threadID, messageID);
+                    api.sendMessage("𝗠𝗢𝗗𝗘 » تم تفعيل وضع الـ Ib فقط بنجاح، يمكن للمسؤولين فقط استخدام البوتات في صندوق الوارد الخاص بهم 💬", threadID, messageID);
                 } else {
                     config.adminPaOnly = false;
-                    api.sendMessage("[ 𝐌𝐎𝐃𝐄 ] » 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗱𝗶𝘀𝗮𝗯𝗹𝗲 𝗜𝗯 𝗢𝗻𝗹𝘆 𝗺𝗼𝗱𝗲, 𝗲𝘃𝗲𝗿𝘆𝗼𝗻𝗲 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗲 𝗯𝗼𝘁 𝗶𝗻 𝘁𝗵𝗲𝗶𝗿 𝗼𝘄𝗻 𝗶𝗻𝗯𝗼𝘅 💬", threadID, messageID);
+                    api.sendMessage("[ 𝐌𝐎𝐃𝐄 ] » تم تعطيل وضع الـ Ib فقط بنجاح، يمكن للجميع استخدام البوت في صندوق الوارد الخاص بهم 💬", threadID, messageID);
                 }
                     writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf8');
             break;
@@ -232,13 +246,13 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         case 'only':
         case '-o': {
             //---> CODE ADMIN ONLY<---//
-          if (permssion != 3) return api.sendMessage("𝗠𝗢𝗗𝗘 - 𝗕𝗼𝗿𝗱𝗲𝗿 𝗰𝗮𝗻𝗴𝗹𝗲 𝗿𝗶𝗴𝗵𝘁𝘀 🎀 ", threadID, messageID);
+          if (permssion != 3) return api.sendMessage("𝗠𝗢𝗗𝗘 -  تبديل حقوق الحدود 🎀", threadID, messageID);
             if (config.adminOnly == false) {
                 config.adminOnly = true;
-                api.sendMessage(`𝗠𝗢𝗗𝗘 - 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗲𝗻𝗮𝗯𝗹𝗲 𝗔𝗱𝗺𝗶𝗻 𝗢𝗻𝗹𝘆 𝗺𝗼𝗱𝗲, 𝗼𝗻𝗹𝘆 𝗮𝗱𝗺𝗶𝗻𝘀 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗯𝗼𝘁𝘀 👑`, threadID, messageID);
+                api.sendMessage(`𝗠𝗢𝗗𝗘 - تم تفعيل وضع المسؤولين فقط بنجاح، يمكن للمسؤولين فقط استخدام البوتات 👑`, threadID, messageID);
             } else {
                 config.adminOnly = false;
-                api.sendMessage(`𝗠𝗢𝗗𝗘 - 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗱𝗶𝘀𝗮𝗯𝗹𝗲 𝗔𝗱𝗺𝗶𝗻 𝗢𝗻𝗹𝘆 𝗺𝗼𝗱𝗲, 𝗲𝘃𝗲𝗿𝘆𝗼𝗻𝗲 𝗰𝗮𝗻 𝘂𝘀𝗲 𝘁𝗵𝗲 𝗯𝗼𝘁 👑`, threadID, messageID);
+                api.sendMessage(`𝗠𝗢𝗗𝗘 - تم تعطيل وضع المسؤولين فقط بنجاح، يمكن للجميع استخدام البوت 👑`, threadID, messageID);
             }
                 writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf8');
                 break;
