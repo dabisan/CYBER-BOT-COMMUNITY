@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "slot",
+    name: "سلوت",
     version: "1.0.1",
     hasPermssion: 0,
     credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -33,9 +33,9 @@ module.exports.run = async function({ api, event, args, Currencies, getText }) {
     const moneyUser = (await getData(senderID)).money;
 
     var moneyBet = parseInt(args[0]);
-    if (isNaN(moneyBet) || moneyBet <= 0) return api.sendMessage(getText("missingInput"), threadID, messageID);
-	if (moneyBet > moneyUser) return api.sendMessage(getText("moneyBetNotEnough"), threadID, messageID);
-	if (moneyBet < 50) return api.sendMessage(getText("limitBet"), threadID, messageID);
+    if (isNaN(moneyBet) || moneyBet <= 0) return api.sendMessage(getText("فشل الادخال"), threadID, messageID);
+	if (moneyBet > moneyUser) return api.sendMessage(getText("يا فقير😹المال غير كافي"), threadID, messageID);
+	if (moneyBet < 50) return api.sendMessage(getText("الحد الأقصى للرهان"), threadID, messageID);
     var number = [], win = false;
     for (i = 0; i < 3; i++) number[i] = Math.floor(Math.random() * slotItems.length);
     if (number[0] == number[1] && number[1] == number[2]) {
