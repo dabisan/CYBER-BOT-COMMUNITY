@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "rank",
+	name: "مستوى",
 	version: "2.0.0",
 	hasPermssion: 0,
 	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -174,7 +174,7 @@ module.exports.run = async ({ event, api, args, Currencies, Users }) => {
 	if (args.length == 0) {
 		const rank = dataAll.findIndex(item => parseInt(item.userID) == parseInt(event.senderID)) + 1;
 		const name = global.data.userName.get(event.senderID) || await Users.getNameUser(event.senderID);
-		if (rank == 0) return api.sendMessage("Error❌ Please try again in 5 seconds.", event.threadID, event.messageID);
+		if (rank == 0) return api.sendMessage("حصل خطأ🥲 حاول مجددا.", event.threadID, event.messageID);
 		const point = await this.getInfo(event.senderID, Currencies);
 		const timeStart = Date.now();
 		let pathRankCard = await this.makeRankCard({ id: event.senderID, name, rank, ...point })
@@ -183,7 +183,7 @@ module.exports.run = async ({ event, api, args, Currencies, Users }) => {
 	if (mention.length == 1) {
 		const rank = dataAll.findIndex(item => parseInt(item.userID) == parseInt(mention[0])) + 1;
 		const name = global.data.userName.get(mention[0]) || await Users.getNameUser(mention[0]);
-		if (rank == 0) return api.sendMessage("Error❌ Please try again in 5 seconds.", event.threadID, event.messageID);
+		if (rank == 0) return api.sendMessage("حصل خطأ 🥲 حاول مجددا.", event.threadID, event.messageID);
 		let point = await this.getInfo(mention[0], Currencies);
 		let pathRankCard = await this.makeRankCard({ id: mention[0], name, rank, ...point })
 		return api.sendMessage({ attachment: fs.createReadStream(pathRankCard) }, event.threadID, () => fs.unlinkSync(pathRankCard), event.messageID);
@@ -192,7 +192,7 @@ module.exports.run = async ({ event, api, args, Currencies, Users }) => {
 		for (const userID of mention) {
 			const rank = dataAll.findIndex(item => parseInt(item.userID) == parseInt(userID)) + 1;
 			const name = global.data.userName.get(userID) || await Users.getNameUser(userID);
-			if (rank == 0) return api.sendMessage("Error❌ Please try again in 5 seconds.", event.threadID, event.messageID);
+			if (rank == 0) return api.sendMessage("حصل خطأ❌ حاول مجددا.", event.threadID, event.messageID);
 			let point = await this.getInfo(userID, Currencies);
 			let pathRankCard = await this.makeRankCard({ id: userID, name, rank, ...point })
 			return api.sendMessage({ attachment: fs.createReadStream(pathRankCard) }, event.threadID, () => fs.unlinkSync(pathRankCard), event.messageID);
