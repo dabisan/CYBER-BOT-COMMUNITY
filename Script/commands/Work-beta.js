@@ -1,6 +1,6 @@
 
 module.exports.config = {
-    name: "job",
+    name: "عمل",
     version: "1.0.2",
     hasPermssion: 0,
     credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️", 
@@ -53,21 +53,21 @@ var msg = "";
         case "choosee": {
             
             switch(event.body) {
-                case "1": msg = `⚡️You are working ${work1} in the industrial zone and earn ${coinscn}$` ; Currencies.increaseMoney(event.senderID, coinscn); break;             
-                case "2": msg = `⚡️You are working ${work2} in the service area and earn ${coinsdv}$`; Currencies.increaseMoney(event.senderID, coinsdv); break;
-                case "3": msg = `⚡️You ${work3} at the open oil and sell ${coinsmd}$`; Currencies.increaseMoney(event.senderID, coinsmd); break;
-                case "4": msg = `⚡️You are mining ${work4} and earn ${coinsq}$`; Currencies.increaseMoney(event.senderID, coinsq); break;
-                case "5": msg = `⚡️You can dig ${work5} and earn ${coinsdd}$` ; Currencies.increaseMoney(event.senderID, coinsdd); break;
-                case "6": msg = `⚡️You choose ${work6} and given ${coinsdd1}$ if xxx 1 night, then you agree right away :)))`; Currencies.increaseMoney(event.senderID, coinsdd1); break;
+                case "1": msg = `⚡️أنت تعمل ${work1} في المنطقة الصناعية وكسب ${coinscn}$` ; Currencies.increaseMoney(event.senderID, coinscn); break;             
+                case "2": msg = `⚡️أنت تعمل ${work2} تبيع زلابية و الشاربات فبوفاريك و كسبت ${coinsdv}$`; Currencies.increaseMoney(event.senderID, coinsdv); break;
+                case "3": msg = `⚡️انت تعمل ${work3} في النفط المفتوح وبيع ${coinsmd}$`; Currencies.increaseMoney(event.senderID, coinsmd); break;
+                case "4": msg = `⚡️انت تعمل${work4} في منجم وحصلت على ${coinsq}$`; Currencies.increaseMoney(event.senderID, coinsq); break;
+                case "5": msg = `⚡️انت تحفر ${work5} وحصلت على ${coinsdd}$` ; Currencies.increaseMoney(event.senderID, coinsdd); break;
+                case "6": msg = `⚡️اخترت ${work6} وحصلت على ${coinsdd1}$ :)))`; Currencies.increaseMoney(event.senderID, coinsdd1); break;
                 case "7": msg = "⚡️ Coming soon..."; break; //add case if you want 
                 default: break;
             };
             const choose = parseInt(event.body);
-            if (isNaN(event.body)) return api.sendMessage("⚡️Please enter 1 con number", event.threadID, event.messageID);
-            if (choose > 7 || choose < 1) return api.sendMessage("⚡️Option is not on the list.", event.threadID, event.messageID); //thay số case vào số 7
+            if (isNaN(event.body)) return api.sendMessage("⚡️اخترت رقم اشتراك واحد", event.threadID, event.messageID);
+            if (choose > 7 || choose < 1) return api.sendMessage("⚡️الخيار غير موجود هيهي.", event.threadID, event.messageID); //thay số case vào số 7
             api.unsendMessage(handleReply.messageID);
-            if (msg == "⚡️Chưa update...") {
-                msg = "⚡️Update soon...";
+            if (msg == "⚡️...") {
+                msg = "⚡️تحديث قادم...";
             };
             return api.sendMessage(`${msg}`, threadID, async () => {
             data.work2Time = Date.now();
@@ -99,7 +99,7 @@ module.exports.run = async ({  event, api, handleReply, Currencies, getText }) =
   /*Đào đá*/ "\n5. work5" +
   /*cave*/    "\n6. work6" +
                 "\n7. Update soon..." +
-                "\n\n⚡️Please reply to the message and choose by number" //add case display here ||  \n[number]. [Career]" +
+                "\n\nقم بالرد على هذه الرسالة و اختر رقم" //add case display here ||  \n[number]. [Career]" +
             , event.threadID, (error, info) => {
                 data.work2Time = Date.now();
         global.client.handleReply.push({
