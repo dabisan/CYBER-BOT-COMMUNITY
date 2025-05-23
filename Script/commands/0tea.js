@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "tea",
+  name: "قهوة",
     version: "1.0.1",
   hasPermssion: 0,
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", 
@@ -12,9 +12,9 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-  if (event.body.indexOf("tea")==0 || event.body.indexOf("Tea")==0 || event.body.indexOf("Cha")==0 || event.body.indexOf("চা")==0) {
+  if (event.body.indexOf("قهوة")==0 || event.body.indexOf("قهوة")==0 || event.body.indexOf("قهوة")==0 || event.body.indexOf("coffee")==0) {
     var msg = {
-        body: "ai Lo Bby ☕",
+        body: "haha women ☕",
         attachment: fs.createReadStream(__dirname + `/noprefix/tea.mp4`)
       }
       api.sendMessage(msg, threadID, messageID);
