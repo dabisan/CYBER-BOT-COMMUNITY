@@ -4,7 +4,7 @@ const fs = require("fs-extra");
 const moment = require("moment-timezone");
 
 module.exports.config = {
-    name: "admin",
+    name: "مطور",
     version: "1.0.0",
     hasPermssion: 0,
     credits: "ULLASH", //don't change my credit 
@@ -20,21 +20,21 @@ module.exports.run = async function({ api, event }) {
     var callback = () => api.sendMessage({
         body: `
 ┏━━━━━━━━━━━━━━━━━━━━━┓
-┃      🌟 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 🌟      
+┃      🌟 معلومات المطور المزز >< 🌟      
 ┣━━━━━━━━━━━━━━━━━━━━━┫
-┃ 👤 𝐍𝐚𝐦𝐞      : 𝐮 𝐥 𝐥 𝐚 𝐬 𝐡 ッ
-┃ 🚹 𝐆𝐞𝐧𝐝𝐞𝐫    : 𝐌𝐚𝐥𝐞
-┃ ❤️ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧  : 𝐈𝐧 𝐂𝐨𝐦𝐩𝐥𝐢𝐜𝐚𝐭𝐞𝐝
-┃ 🎂 𝐀𝐠𝐞       : 21
-┃ 🕌 𝐑𝐞𝐥𝐢𝐠𝐢𝐨𝐧  : 𝐈𝐬𝐥𝐚𝐦
-┃ 🏫 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 : 𝐝𝐢𝐩𝐥𝐨𝐦𝐚 𝐢𝐧 𝐀𝐠𝐫𝐢𝐜𝐮𝐥𝐭𝐮𝐫𝐞
-┃ 🏡 𝐀𝐝𝐝𝐫𝐞𝐬𝐬  : 𝐍𝐨𝐚𝐤𝐡𝐚𝐥𝐢, 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡
+┃ 👤 𝐍𝐚𝐦𝐞      : يونوو
+┃
+┃ ❤️ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧  : متزوج معي ⁦ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ⁩
+┃ 🎂 𝐀𝐠𝐞       : 21 ويي
+┃ 🕌 𝐑𝐞𝐥𝐢𝐠𝐢𝐨𝐧  : مسلم عمك
+┃ 🏫 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 : مش شغلك
+┃ 🏡 𝐀𝐝𝐝𝐫𝐞𝐬𝐬  : الجزائر🫠
 ┣━━━━━━━━━━━━━━━━━━━━━┫
-┃ 🎭 𝐓𝐢𝐤𝐭𝐨𝐤  : ullash01
-┃ 📢 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 : https://t.me/The_morning_star71
-┃ 🌐 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 : https://www.facebook.com/profile.php?id=100015168369582
+┃ 🎭 𝐓𝐢𝐤𝐭𝐨𝐤  : مش شغلك
+┃ 📢 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 : مش شغلك
+┃ 🌐 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 : مش شغلك
 ┣━━━━━━━━━━━━━━━━━━━━━┫
-┃ 🕒 𝐔𝐩𝐝𝐚𝐭𝐞𝐝 𝐓𝐢𝐦𝐞:  ${time}
+┃
 ┗━━━━━━━━━━━━━━━━━━━━━┛
         `,
         attachment: fs.createReadStream(__dirname + "/cache/1.png")
