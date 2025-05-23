@@ -5,99 +5,99 @@
 
 # Priyansh.js 
 
-priyansh.errorFormat=Malformed module!
-priyansh.nameExist=Module's name is similar to another module!
-priyansh.notFoundLanguage=Module %1 don't support your language
-priyansh.notFoundPackage=Can't find package %1 support for module %2, installing...
-priyansh.cantInstallPackage=Can't install package %1 for module %2, error: %3
-priyansh.loadedPackage=Installed whole package successfully for module %1
-priyansh.loadedConfig=Installed config successfully for module %1
-priyansh.cantLoadConfig=Can't install config of module %1, error: %2
-priyansh.cantOnload=Can't launch setup of module %1, error: %1
-priyansh.successLoadModule=Successfully installed module %1
-priyansh.failLoadModule=Can't install module %1, error: %2
-priyansh.finishLoadModule=Installed %1 module commands and %2 module events successfully 
-priyansh.foundPathAppstate=Found file appstate
-priyansh.notFoundPathAppstate=Can't find file appstate
-priyansh.checkListGban=Cheking global ban list...
-priyansh.banDevice=Your device have been banned from miraiproject, please contact to facebook https://fb.me/catalizcs to know more information or asking for unban key, if you already have unban key, please fill it below.
-priyansh.keyNotSameFormat=Wrong format, code must contain 6 number.
-priyansh.codeInputExpired=Your code is wrong or out of date.
-priyansh.unbanDeviceSuccess=Your device are unban now, please restart to use.
-priyansh.userBanned=You had been banned from miraiproject when %1 with reason: %2. Please contact to facebook https://fb.me/catalizCS to have more information!
-priyansh.finishCheckListGban=Checked global ban list
-priyansh.handleListenError=handleListene has occurred some unexpected errorr, error : %1
-priyansh.warningSourceCode=DETECTED THAT SOURCE CODE'S STRUCTURE HAD BEEN CHANGED , STOP NOW!
-priyansh.refreshListen=Refreshed handleListener...
-priyansh.successConnectDatabase=Connected to database successfully!
-priyansh.failConnectDatabase=Failed to connect to database, error: %1
+priyansh.errorFormat=أوه لا! شكل الموديول فيه مشكلة! حاول تظبطه من جديد يا صاحبي! 🤖✨ (يونا مع يونو)
+priyansh.nameExist=اسم الموديول يشبه اسم موديول ثاني! خلينا نغير الاسم شوية؟ 😅 (يونا وفريق يونو)
+priyansh.notFoundLanguage=الموديول %1 ما يدعم لغتك الحلوة، خلينا ندور حل ثاني! 🌈 (يونا ويا يونو)
+priyansh.notFoundPackage=مش لاقيين الحزمة %1 لموديول %2، بحاول أركبها لك الحين... 🚀 (يونا مع يونو)
+priyansh.cantInstallPackage=آخ! ما قدرت أثبت الحزمة %1 للموديول %2، الخطأ: %3 😵‍💫 (يونا بتحاول ويونو يشجعها)
+priyansh.loadedPackage=تم تثبيت الحزمة كاملة للموديول %1 بنجاح! يلا نكمل المشوار! 🎉 (يونا ويونو)
+priyansh.loadedConfig=تم تثبيت إعدادات الموديول %1 بنجاح! كل شيء تمام! ⚙️ (يونا ويا يونو)
+priyansh.cantLoadConfig=آه ما قدرت أثبت إعدادات الموديول %1، الخطأ: %2 😞 (يونا تحاول مع يونو)
+priyansh.cantOnload=مش قادر أبدأ إعداد الموديول %1، خطأ: %1 😵‍💫 (يونا ويا يونو)
+priyansh.successLoadModule=يا هلا! الموديول %1 تم تثبيته بنجاح، جاهزين للشغل! 🎮 (يونا وفريق يونو)
+priyansh.failLoadModule=آسفة، ما قدرت أثبت الموديول %1، الخطأ: %2 😔 (يونا بتحاول مع يونو)
+priyansh.finishLoadModule=ثبتت %1 أوامر و %2 أحداث للموديول بنجاح! ممتاز! 🎉 (يونا ويونو)
+priyansh.foundPathAppstate=لقيت ملف appstate، يلا بينا! 🚀 (يونا ويونو)
+priyansh.notFoundPathAppstate=ما حصلت ملف appstate، بنبحث أكثر! 🔍 (يونا ويا يونو)
+priyansh.checkListGban=جاري التحقق من قائمة الحظر العامة... ⏳ (يونا مع يونو)
+priyansh.banDevice=جهازك محظور من مشروع ميرا، تواصل مع يونو عبر فيسبوك https://fb.me/catalizcs لمعرفة التفاصيل أو طلب مفتاح رفع الحظر. وإذا عندك المفتاح، دخله هنا. 🚫 (يونا ويونو)
+priyansh.keyNotSameFormat=الصيغة غلط! لازم الكود يكون 6 أرقام بالضبط. حاول مرة ثانية! 🤨 (يونا وفريق يونو)
+priyansh.codeInputExpired=الكود خاطئ أو منتهي الصلاحية. جرب كود جديد! ⏰ (يونا ويونو)
+priyansh.unbanDeviceSuccess=تم رفع الحظر عن جهازك، رجع للحياة! رجاءً أعد تشغيل البوت! 🔓 (يونا مع يونو)
+priyansh.userBanned=آسف! تم حظرك من مشروع ميرا عند %1 بسبب: %2. تواصل مع يونو عبر https://fb.me/catalizCS للمساعدة! 🚫 (يونا ويونو)
+priyansh.finishCheckListGban=تم التحقق من قائمة الحظر العامة بنجاح! ✅ (يونا ويا يونو)
+priyansh.handleListenError=حدث خطأ غير متوقع في handleListener، الخطأ: %1 😵 (يونا ويا يونو)
+priyansh.warningSourceCode=تحذير! تم تعديل هيكل كود المصدر! وقف كل شيء حالاً! ⚠️ (يونا تحذر ويونو يدعم)
+priyansh.refreshListen=تم تحديث handleListener بنجاح! جاهزين دائماً! 🔄 (يونا ويا يونو)
+priyansh.successConnectDatabase=تم الاتصال بقاعدة البيانات بنجاح! هيا نبدأ الشغل! 🗄️ (يونا مع يونو)
+priyansh.failConnectDatabase=فشلت محاولة الاتصال بقاعدة البيانات، الخطأ: %1 😔 (يونا تحاول مع يونو)
 
 # includes/listen.js
 
-listen.startLoadEnvironment=Proceed to load the environment variable ...
-listen.loadedEnvironmentThread=Loaded thread environment variable successfully 
-listen.loadedEnvironmentUser=Loaded user environment variable successfully 
-listen.successLoadEnvironment=Loaded environment variable successfully 
-listen.failLoadEnvironment=Can't load environment variable, error: %1
+listen.startLoadEnvironment=جاري تحميل متغيرات البيئة... تمهل شوي! 🌿 (يونا وفريق يونو)
+listen.loadedEnvironmentThread=تم تحميل متغيرات بيئة الخيط بنجاح! 🧵 (يونا ويا يونو)
+listen.loadedEnvironmentUser=تم تحميل متغيرات بيئة المستخدم بنجاح! 👤 (يونا وفريق يونو)
+listen.successLoadEnvironment=تم تحميل متغيرات البيئة بنجاح! جاهزين! 🌟 (يونا ويونو)
+listen.failLoadEnvironment=ما قدرت أحمل متغيرات البيئة، الخطأ: %1 😞 (يونا تحاول ويونو معاها)
 
 # includes/controller/currencies.js
 
-currencies.needObjectOrArray=Have to be an Array or an Object or maybe both
-currencies.needObject=Have to be an Object
-currencies.needNumber= Have to be an number
+currencies.needObjectOrArray=لازم يكون مصفوفة أو كائن أو حتى الاثنين مع بعض! 😉 (يونا ويونو)
+currencies.needObject=لازم يكون كائن (Object) يا صديقي! 🤓 (يونا ويونو)
+currencies.needNumber=لازم يكون رقم، الرقم مهم! 🔢 (يونا ويونو)
 
 # includes/controller/threads.js
 
-threads.needObjectOrArray=Have to be an Array or an Object or maybe both
-threads.needObject=Have to be an Object 
+threads.needObjectOrArray=لازم يكون مصفوفة أو كائن أو الاثنين مع بعض! 🤖 (يونا ويونو)
+threads.needObject=لازم يكون كائن (Object) عشان نقدر نشتغل! 👍 (يونا ويونو)
 
 # includes/controller/users.js
 
-users.needObjectOrArray=Have to be an Array or an Object or maybe both
-users.needObject=Have to be an Object
+users.needObjectOrArray=لازم يكون مصفوفة أو كائن أو الاثنين مع بعض! 🧑‍🤝‍🧑 (يونا ويونو)
+users.needObject=لازم يكون كائن (Object) شاطر! 👌 (يونا ويونو)
 
 # includes/handle/handleCommand.js
 
-handleCommand.userBanned=You are unable to use bot!\n%1\n%2
-handleCommand.threadBanned=Your thread are unable to use bot!\n%1\n%2
-handleCommand.commandNotExist=Mujhe Ye Command Nahi Mili Dusri Try Karlo ☣️🥀
-handleCommand.commandThreadBanned=Your thread is unable to use command "%1"
-handleCommand.commandUserBanned=You are unable to use command "%1"
-handleCommand.threadNotAllowNSFW=Your thread is not allowed to use NSFW commands
-handleCommand.cantGetInfoThread=Can't get your thread's info, error: %1
-handleCommand.permssionNotEnough=You have no permission to use command "%1"
-handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageReaction, error: %1
-handleCommand.executeCommand=[ %1 ] Command used: %2 by user: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
-handleCommand.commandError=Having some unexpected error when using command %1, error: %2
+handleCommand.userBanned=آسف يا صديقي، أنت ممنوع من استخدام البوت!\n%1\n%2 (يونا تحكي ويونو يدعم)
+handleCommand.threadBanned=خيط المحادثة هذا ممنوع من استخدام البوت!\n%1\n%2 (يونا مع يونو)
+handleCommand.commandNotExist=مش لاقي الأمر هذا عندي، جرب أمر ثاني! ☣️🥀 (يونا بأسلوب ظريف)
+handleCommand.commandThreadBanned=خيط المحادثة ممنوع من استخدام الأمر "%1" (يونا ويونو)
+handleCommand.commandUserBanned=آسف، ما تقدر تستخدم الأمر "%1" لأنك ممنوع (يونا ويونو)
+handleCommand.threadNotAllowNSFW=خيط المحادثة هذا ممنوع من استخدام أوامر الـ NSFW 😇 (يونا مع يونو)
+handleCommand.cantGetInfoThread=ما قدرت أجيب معلومات خيط المحادثة، الخطأ: %1 😞 (يونا تحاول ويونو معها)
+handleCommand.permssionNotEnough=ما عندك صلاحيات تستخدم الأمر "%1" 😕 (يونا ويا يونو)
+handleCommand.cantSetMessageReaction=في خطأ غريب أثناء إضافة رد فعل على الرسالة، الخطأ: %1 😵 (يونا تحاول ويونو يساعد)
+handleCommand.executeCommand=[ %1 ] تم استخدام الأمر: %2 بواسطة المستخدم: %3 في المحادثة: %4 | مع المعطيات: %5 | وقت التنفيذ: %6 مللي ثانية (يونا تحكي ويونو)
+handleCommand.commandError=واجهنا خطأ غير متوقع أثناء استخدام الأمر %1، الخطأ: %2 😔 (يونا تحاول ويونو)
 
 # includes/handle/handleCommandEvent.js
 
-handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
+handleCommandEvent.moduleError=في مشكلة غير متوقعة أثناء استخدام الأمر %1، الخطأ: %2 😵 (يونا ويونو)
 
 # includes/handle/handleCreateDatabase.js
 
-handleCreateDatabase.newThread=new thread: %1
-handleCreateDatabase.newUser=new user %1
+handleCreateDatabase.newThread=تم إنشاء خيط جديد: %1 (يونا ويا يونو)
+handleCreateDatabase.newUser=تم إنشاء مستخدم جديد: %1 (يونا وفريق يونو)
 
 # includes/handle/handleEvent.js
 
-handleEvent.executeEvent=[ %1 ] Event was executed: %2 at thread: %3 | Processing time: %4ms
-handleEvent.eventError=Having some error when executing event %1, error: %12
+handleEvent.executeEvent=[ %1 ] تم تنفيذ الحدث: %2 في المحادثة: %3 | وقت التنفيذ: %4 مللي ثانية (يونا ويونو)
+handleEvent.eventError=حدث خطأ أثناء تنفيذ الحدث %1، الخطأ: %12 😞 (يونا ويونو)
 
 # includes/handle/handleReaction.js
 
-handleReaction.missingValue=Missing value to respond your problem
-handleReaction.executeError=Having some error when responding your problem, error: %1
+handleReaction.missingValue=قيمة مفقودة عشان أقدر أساعدك! 🤷‍♀️ (يونا ويونو)
+handleReaction.executeError=حدث خطأ وأنا أرد على مشكلتك، الخطأ: %1 😞 (يونا ويا يونو)
 
 # includes/handle/handleReply.js
 
-handleReply.missingValue=Missing value to respond your problem
-handleReply.executeError=Having some error when responding your problem, error: %1
+handleReply.missingValue=ما عندي قيمة أرد عليها، ساعدني بقيمة! 🙃 (يونا ويونو)
+handleReply.executeError=في خطأ وأنا أرد على مشكلتك، الخطأ: %1 😔 (يونا ويونو)
 
 # includes/handle/handleSchedule.js
 
-handleSchedule.exectuteError=Having some error when schedule at module %1, error: %2
+handleSchedule.exectuteError=في خطأ أثناء جدولة مهمة في الموديول %1، الخطأ: %2 😵 (يونا ويونو)
 
 # utils/index.js
 
-utils.throwError=[!] The command you are using is not syntax correct, please use %1help %2 for more usage details
+utils.throwError=[!] الأمر اللي استخدمته فيه خطأ في الصياغة، رجاءً استخدم %1help %2 عشان تعرف كيف تستخدمه صح! ⚠️ (يونا وفريق يونو)
