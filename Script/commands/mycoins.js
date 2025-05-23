@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "coin",
+	name: "رصيد",
 	version: "1.0.2",
 	hasPermssion: 0,
 	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
@@ -25,7 +25,7 @@ module.exports.run = async function({ api, event, args, Currencies, getText }) {
 
 	if (!args[0]) {
 		const money = (await Currencies.getData(senderID)).money;
-		return api.sendMessage(getText("sotienbanthan", money), threadID, messageID);
+		return api.sendMessage(getText("الرصيد هو:", money), threadID, messageID);
 	}
 
 	else if (Object.keys(event.mentions).length == 1) {
