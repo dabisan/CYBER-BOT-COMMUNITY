@@ -16,7 +16,7 @@ module.exports.run = async({ event, api, Threads, Users }) => {
   api.addUserToGroup(event.logMessageData.leftParticipantFbId, event.threadID, (error, info) => {
    if (error) {
     api.sendMessage(`غادر بكرامته.. \n ${name} نمزح ممنوع تخرج😹 \n\n ──────·····✦·····──── \n 𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁 | ᵁᴸᴸ⁴ˢᴴ `, event.threadID)
-   } else api.sendMessage(`, ${name} \n هذا هو المكان المناسب للعيش فيه هكذا! \n بطاقة الائتمان الخاصة بك – هويتك شكرا لك. \n\n ── ·······✦·······──── \n 𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁 | ᵁᴸᴸ⁴ˢᴴ `, event.threadID);
+   } else api.sendMessage(`, ${name} \n هذا هو المكان المناسب للعيش فيه هكذا! \n بطاقة الائتمان الخاصة بك – هويتك شكرا لك. \n\n`, event.threadID);
   })
  }
 }

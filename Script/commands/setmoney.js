@@ -2,62 +2,79 @@ module.exports.config = {
 	name: "مال",
 	version: "0.0.1",
 	hasPermssion: 2,
-	credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
-	description: "change the amount of yourself or the person tagged",
-	commandCategory: "System",
-	usages: "setmoney [Tag]",
+	credits: "𝐘𝐔𝐍𝐎 ⚠️",
+	description: "تغيير رصيدك أو رصيد شخص تم الإشارة إليه",
+	commandCategory: "النظام",
+	usages: "مال [أنا | حذف | UID | @شخص]",
 	cooldowns: 5,
 	info: [
 		{
 			key: 'Tag',
-			prompt: 'Leave blank or tag someone, you can tag more than one person',
+			prompt: 'اتركه فارغًا أو أشر إلى شخص، يمكنك الإشارة لأكثر من شخص',
 			type: 'Document',
-			example: '@Priyansh'
+			example: '@اسم'
 		}
 	]
 };
 
-module.exports.run = async function({ api, event, args, Currencies, utils, Users}) {
-var mention = Object.keys(event.mentions)[0];
-    var prefix = ";"
-    var {body} = event;
-    			var content = body.slice(prefix.length + 9, body.length);
-			var sender = content.slice(0, content.lastIndexOf(" "));
-			var moneySet = content.substring(content.lastIndexOf(" ") + 1);
-    			if (args[0]=='انا'){
-    			 return api.sendMessage(`تم تغيير رصيدك الى ${moneySet} هيهي`, event.threadID, () => Currencies.increaseMoney(event.senderID, parseInt(moneySet)), event.messageID)	
-			}
-			else if(args[0]=="حذف"){
-if (args[1] == 'me'){
-			var s = event.senderID;
-			const moneyme =(await Currencies.getData(event.senderID)).money;
-			api.sendMessage(`✅لقد صرت فقير😹\n💸الرصيد الذي تم حذفه هو ${moneyme}.`, event.threadID, async () => await Currencies.decreaseMoney(event.senderID, parseInt(moneyme)));
-		}	
-		else if (Object.keys(event.mentions).length == 1) {
-var mention = Object.keys(event.mentions)[0];
-		const moneydel = (await Currencies.getData(mention)).money;
-		api.sendMessage(`✅تم حذف رصيد ${event.mentions[mention].replace("@", "")}\n💸الرصيد الذي تم حذفه ${moneydel}.`, event.threadID, async () => await Currencies.decreaseMoney(mention, parseInt(moneydel)));
-		}
-		
-		else return	api.sendMessage("فشل", event.threadID, event.messageID);
-		}
-			else if (Object.keys(event.mentions).length == 1) {
-			return api.sendMessage({
-				body: (`تغيير رصيد ${event.mentions[mention].replace("@", "")} الى ${moneySet}`),
-				mentions: [{
-					tag: event.mentions[mention].replace("@", ""),
-					id: mention
-				}]
-			}, event.threadID, async () => Currencies.increaseMoney(mention, parseInt(moneySet)), event.messageID)
-		}
-		else if(args[0]=="UID"){
-		var id = args[1];
-		var cut = args[2];
-		let nameeee = (await Users.getData(id)).name
-		   return api.sendMessage(`تغيير الرصيد  ${nameeee} قوي ${cut}`, event.threadID, () => Currencies.increaseMoney(id, parseInt(cut)), event.messageID)	
+module.exports.run = async function({ api, event, args, Currencies, utils, Users }) {
+	const mention = Object.keys(event.mentions)[0];
+	const prefix = ";";
+	const { body, senderID, threadID, messageID } = event;
 
-		}
-else {
-	api.sendMessage("اح", event.threadID, event.messageID)
+	// استخراج الرصيد من الرسالة
+	const المحتوى = body.slice(prefix.length + 4); // "مال " = 4 حروف
+	const المُرسل = المحتوى.slice(0, المحتوى.lastIndexOf(" "));
+	const المبلغ = المحتوى.substring(المحتوى.lastIndexOf(" ") + 1);
+
+	// حالة تغيير رصيدك أنت
+	if (args[0] === 'انا') {
+		await Currencies.increaseMoney(senderID, parseInt(المبلغ));
+		return api.sendMessage(`✅ تم تغيير رصيدك إلى ${المبلغ} بنجاح.`, threadID, messageID);
 	}
-  }
+
+	// حالة حذف الرصيد بالكامل
+	else if (args[0] === "حذف") {
+		if (args[1] === 'me') {
+			const رصيدي = (await Currencies.getData(senderID)).money || 0;
+			await Currencies.decreaseMoney(senderID, رصيدي);
+			return api.sendMessage(`✅ لقد أصبحت مفلسًا!\n💸 الرصيد الذي تم حذفه: ${رصيدي}.`, threadID, messageID);
+		}
+		else if (mention) {
+			const رصيد_المذكور = (await Currencies.getData(mention)).money || 0;
+			await Currencies.decreaseMoney(mention, رصيد_المذكور);
+			const الاسم = event.mentions[mention].replace("@", "");
+			return api.sendMessage(`✅ تم حذف رصيد ${الاسم} بالكامل.\n💸 الرصيد المحذوف: ${رصيد_المذكور}.`, threadID, messageID);
+		}
+		else {
+			return api.sendMessage("❌ فشل: يجب الإشارة إلى شخص أو استخدام 'me'.", threadID, messageID);
+		}
+	}
+
+	// حالة تغيير رصيد شخص مذكور بالإشارة
+	else if (mention) {
+		await Currencies.increaseMoney(mention, parseInt(المبلغ));
+		const الاسم = event.mentions[mention].replace("@", "");
+		return api.sendMessage({
+			body: `✅ تم تغيير رصيد ${الاسم} إلى ${المبلغ}.`,
+			mentions: [{
+				tag: الاسم,
+				id: mention
+			}]
+		}, threadID, messageID);
+	}
+
+	// حالة تغيير الرصيد عن طريق UID
+	else if (args[0] === "UID") {
+		const uid = args[1];
+		const القيمة = args[2];
+		const الاسم = (await Users.getData(uid)).name;
+		await Currencies.increaseMoney(uid, parseInt(القيمة));
+		return api.sendMessage(`✅ تم تغيير رصيد ${الاسم} إلى ${القيمة}.`, threadID, messageID);
+	}
+
+	// في حالة عدم المطابقة
+	else {
+		return api.sendMessage("❌ أمر غير مفهوم. تحقق من الصيغة.", threadID, messageID);
+	}
+};

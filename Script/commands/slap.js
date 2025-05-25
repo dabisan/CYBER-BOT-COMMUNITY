@@ -26,7 +26,7 @@ module.exports.run = async ({ api, event, args }) => {
  let callback = function () {
             api.setMessageReaction("✅", event.messageID, (err) => {}, true);
         api.sendMessage({
-						        body: "Slapped! " + tag + "\n\n*sorry, i thought there's mosquito*",
+						        body: "Slapped! " + tag + "\n\n*ابللللع😹*",
                                           mentions: [{
           tag: tag,
           id: Object.keys(event.mentions)[0]

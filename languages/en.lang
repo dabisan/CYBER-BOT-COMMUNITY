@@ -71,7 +71,7 @@ handleCommand.cantSetMessageReaction=Having some unexpected error at setMessageR
 handleCommand.executeCommand=[ %1 ] Command used: %2 by user: %3 at thread: %4 | Args included: %5 | Processing time: %6ms
 handleCommand.commandError=Having some unexpected error when using command %1, error: %2
 
-# includes/handle/handleCommandEvent.js
+#includes/handle/handleCommandEvent.js
 
 handleCommandEvent.moduleError=Having some unexpected error when using command %1, error: %2
 

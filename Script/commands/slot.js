@@ -1,61 +1,64 @@
 module.exports.config = {
     name: "سلوت",
-    version: "1.0.1",
+    version: "1.1.0",
     hasPermssion: 0,
-    credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
-    description: "fair play",
-    commandCategory: "game-sp",
-    usages: "[number coin required]",
+    credits: "CYBER - ChatGPT Edit",
+    description: "لعبة سلوت لطيفة للفوز بالعملات",
+    commandCategory: "ألعاب",
+    usages: "[المبلغ]",
     cooldowns: 5,
 };
 
-module.exports.languages = {
-    "vi": {
-        "missingInput": "[ SLOT ] Số tiền đặt cược không được để trống hoặc là số âm",
-        "moneyBetNotEnough": "[ SLOT ] Số tiền bạn đặt lớn hơn hoặc bằng số dư của bạn!",
-        "limitBet": "[ SLOT ] Số coin đặt không được dưới 50$!",
-        "returnWin": "🎰 %1 | %2 | %3 🎰\nBạn đã thắng với %4$",
-        "returnLose": "🎰 %1 | %2 | %3 🎰\nBạn đã thua và mất %4$"
-    },
-    "en": {
-        "missingInput": "[ SLOT ] The bet money must not be blank or a negative number",
-        "moneyBetNotEnough": "[ SLOT ] The money you betted is bigger than your balance!",
-        "limitBet": "[ SLOT ] Your bet is too low, the minimum is 50$",
-        "returnWin": "🎰 %1 | %2 | %3 🎰\nYou won with %4$",
-        "returnLose": "🎰 %1 | %2 | %3 🎰\nYou lost and loss %4$"
-    }
-}
-
-module.exports.run = async function({ api, event, args, Currencies, getText }) {
+module.exports.run = async function({ api, event, args, Currencies }) {
     const { threadID, messageID, senderID } = event;
     const { getData, increaseMoney, decreaseMoney } = Currencies;
     const slotItems = ["🍇", "🍉", "🍊", "🍏", "7⃣", "🍓", "🍒", "🍌", "🥝", "🥑", "🌽"];
-    const moneyUser = (await getData(senderID)).money;
+    const userData = await getData(senderID);
+    const userMoney = userData.money;
 
-    var moneyBet = parseInt(args[0]);
-    if (isNaN(moneyBet) || moneyBet <= 0) return api.sendMessage(getText("فشل الادخال"), threadID, messageID);
-	if (moneyBet > moneyUser) return api.sendMessage(getText("يا فقير😹المال غير كافي"), threadID, messageID);
-	if (moneyBet < 50) return api.sendMessage(getText("الحد الأقصى للرهان"), threadID, messageID);
-    var number = [], win = false;
-    for (i = 0; i < 3; i++) number[i] = Math.floor(Math.random() * slotItems.length);
-    if (number[0] == number[1] && number[1] == number[2]) {
-        moneyBet *= 9;
+    let betAmount = parseInt(args[0]);
+
+    // التحقق من صحة المبلغ
+    if (isNaN(betAmount) || betAmount <= 0) {
+        return api.sendMessage("❌ عفوًا! لازم تكتب مبلغ صحيح ترا! جرب مرة ثانية يا جميل 💸", threadID, messageID);
+    }
+    if (betAmount > userMoney) {
+        return api.sendMessage("😿 مافيك تكذب علينا! رصيدك ما يكفي للمراهنة بهالمبلغ! حاول بمبلغ أقل يا كيوت 💔", threadID, messageID);
+    }
+    if (betAmount < 50) {
+        return api.sendMessage("⚠️ المبلغ قليل مرررة! الحد الأدنى للمراهنة هو 50 عملة فقط يا بطل 💰", threadID, messageID);
+    }
+
+    // اختيار رموز عشوائية
+    let numbers = [], win = false;
+    for (let i = 0; i < 3; i++) {
+        numbers[i] = Math.floor(Math.random() * slotItems.length);
+    }
+
+    // التحقق من الفوز
+    if (numbers[0] === numbers[1] && numbers[1] === numbers[2]) {
+        betAmount *= 9;
+        win = true;
+    } else if (numbers[0] === numbers[1] || numbers[0] === numbers[2] || numbers[1] === numbers[2]) {
+        betAmount *= 2;
         win = true;
     }
-    else if (number[0] == number[1] || number[0] == number[2] || number[1] == number[2]) {
-        moneyBet *= 2;
-        win = true;
+
+    const result = `🎰 | ${slotItems[numbers[0]]} | ${slotItems[numbers[1]]} | ${slotItems[numbers[2]]} | 🎰`;
+
+    if (win) {
+        await increaseMoney(senderID, betAmount);
+        return api.sendMessage(
+            `${result}\n\nيا سلاااام! ربحت ${betAmount} عملة! مبروووك يا نجم ⭐️💸`,
+            threadID,
+            messageID
+        );
+    } else {
+        await decreaseMoney(senderID, betAmount);
+        return api.sendMessage(
+            `${result}\n\nآآآه! خسرت ${betAmount} عملة... لا تحزن، الحظ بيضحكلك قريبًا إن شاء الله! 🍀😿`,
+            threadID,
+            messageID
+        );
     }
-    switch (win) {
-        case true: {
-            api.sendMessage(getText("returnWin", slotItems[number[0]], slotItems[number[1]], slotItems[number[2]], moneyBet), threadID, messageID);
-            await increaseMoney(senderID, moneyBet);
-            break;
-        }
-        case false: {
-            api.sendMessage(getText("returnLose", slotItems[number[0]], slotItems[number[1]], slotItems[number[2]], moneyBet), threadID, messageID);
-            await decreaseMoney(senderID, moneyBet);
-            break;
-        }
-    }
-}
+};
